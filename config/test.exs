@@ -10,10 +10,9 @@ config :sweat_bot,
       valid_range: 1..10
     ],
     [
-      instructions:
-        "Lay face down, hands on the floor. Push up. Stay there",
+      instructions: "Lay face down, hands on the floor. Push up. Stay there",
       name: "Plank",
       iteration: "Seconds",
       valid_range: 10..30
-    ],
+    ]
   ]

@@ -10,7 +10,8 @@ defmodule SweatBot.MovementTest do
       iteration: "Rep",
       valid_range: 1..10
     }
-found_movement = eventually_select(movement)
+
+    found_movement = eventually_select(movement)
     assert found_movement == movement
   end
 
