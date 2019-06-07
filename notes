@@ -1,0 +1,26 @@
+Break Nouns into data structures
+  App picks a set of (n)participants and (v)challenges them to a (n)movement.
+  A movement comes with (p)instructions, and (p)duration or (p)repetition count
+  On (p)completion, participants can (v)signal they are done with the movement.
+    Participants can signal that they are skipping.
+  Their (n)record is tracked. Participants can (v)ask for their record.
+
+%Movement{
+  instructions: String,
+  name: String (Pushups|plank),
+  iteration: String (reps, seconds),
+  valid_range: Range
+}
+%Challenge{
+  movement: %Movement{}
+  unit: %Unit{}
+}
+%ParticipationRecord{
+  challenge: %Challenge{},
+  status: pending|completed|passed (Atom)
+}
+%Participant{
+  id: Id,
+  name: String,
+  records: %ParticipationRecord{}
+}
